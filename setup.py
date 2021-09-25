@@ -14,7 +14,9 @@ INSTALL_REQUIRES = [
     "numpy",
     "pandas",
     "matplotlib",
-    "statsmodels"
+    "statsmodels",
+    "typing",
+    "sklearn"
 ]
 setup(name=PACKAGE_NAME,
     version=VERSION,
