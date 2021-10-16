@@ -1,3 +1,4 @@
+"""The setup script."""
 import pathlib
 from setuptools import setup, find_packages
 HERE = pathlib.Path(__file__).parent
@@ -8,7 +9,7 @@ AUTHOR_EMAIL = "mike@saxifrage.xyz"
 URL = "https://github.com/hammer-mt/hommmer"
 LICENSE = "MIT"
 DESCRIPTION = "A simple Marketing Mix Modeling library in Python"
-LONG_DESCRIPTION = (HERE / "README.md").read_text()
+LONG_DESCRIPTION = (HERE / "README.md").read_text(encoding='utf8')
 LONG_DESC_TYPE = "text/markdown"
 INSTALL_REQUIRES = [
     "numpy",
