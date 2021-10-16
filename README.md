@@ -4,6 +4,8 @@ A simple Marketing Mix Modeling library in Python.
 
 ## Quick start
 
+Run a demo in 3 easy steps:
+
 ### 1. Install the library
 
 > `pip install hommmer`
@@ -14,11 +16,17 @@ A simple Marketing Mix Modeling library in Python.
 # import the library
 import hommmer as mmm
 
+# save the demo data locally
+mmm.load('duff')
+
+# list media columns
+media = ['facebook_spend', 'google_spend', 'tiktok_spend']
+
 # build the model
 model = mmm.build(
   'duff.csv',
   'beer_sales',
-  ['facebook', 'google', 'tiktok']
+  media
 )
 ```
 
@@ -33,6 +41,8 @@ model = mmm.build(
 - **type**: label your target as 'conversions' or 'value'. default: 'conversions'
 - **date**: the name of the date column. default: 'date'
 - **format**: the format of the date column. default: 'YYYY-MM-DD'
+
+Provide at least 1 year of weekly data where the `date` column is the start of the week (Monday).
 
 ### 3. Use the results
 
