@@ -28,17 +28,38 @@ Make sure you have the following installed in your development environment:
 
 #### Development Workflow
 
-Follow these steps below to get `import hommmer` working locally:
+Follow these steps below to get the package working locally:
 
-1. Clone the `hommmer` repository and `cd` into it
+1. Clone the GitHub repository
 
 ```shell
 # Using HTTPS
 git clone https://github.com/hammer-mt/hommmer.git
+
 # Or using SSH
 git clone git@github.com:hammer-mt/hommmer.git
-cd hommmer
 ```
+
+2. Activate a virtual environment
+
+```shell
+python -m venv venv
+
+# Using Windows
+`venv\Scripts\activate`
+
+# Using Mac
+`source ./venv/bin/activate`
+```
+
+3. Install the package as editable
+
+```shell
+# Install from the cloned repo:
+%pip install -e <your/path/here>
+```
+
+I like using Jupyter Notebook (Anaconda) because if you run `%loadext autoreload` then `%aimport hommmer` the module will auto-reload on every saved change to your local package.
 
 ### Pull Request
 

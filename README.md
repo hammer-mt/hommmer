@@ -4,8 +4,6 @@ A simple Marketing Mix Modeling library in Python.
 
 ## Quick start
 
-Run a demo in 3 easy steps:
-
 ### 1. Install the library
 
 > `pip install hommmer`
@@ -15,9 +13,6 @@ Run a demo in 3 easy steps:
 ```
 # import the library
 import hommmer as mmm
-
-# save the demo data locally
-mmm.load('duff')
 
 # list media columns
 media = ['facebook_spend', 'google_spend', 'tiktok_spend']
@@ -52,6 +47,19 @@ model.show()
 
 # save locally to png and csv
 model.save()
+```
+
+### Other features
+
+Our solution is fully automated, but if you want to build a model manually, or use our helper functions for cleaning data, you can import from our sublibraries.
+
+```python
+import hommmer as mmm
+from mmm.helpers import transpose
+from mmm.features import adstocks
+from mmm.charts import accuracy
+from mmm.metrics import nrsme
+from mmm.models import linear
 ```
 
 ## About hommmer
