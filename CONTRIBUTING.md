@@ -30,17 +30,35 @@ Make sure you have the following installed in your development environment:
 
 Follow these steps below to get the package working locally:
 
-1. Clone the GitHub repository
+1. Create a personal fork of the project on GitHub and clone locally
 
 ```shell
 # Using HTTPS
-git clone https://github.com/hammer-mt/hommmer.git
+git clone https://github.com/your-username/hommmer.git
 
 # Or using SSH
-git clone git@github.com:hammer-mt/hommmer.git
+git clone git@github.com:your-username/hommmer.git
 ```
 
-2. Activate a virtual environment
+2. Add the original repository as a remote called `upstream`
+
+```shell
+git remote add upstream https://github.com/hammer-mt/hommmer.git
+```
+
+3. Make sure to pull upstream changes into your local repository
+
+```shell
+git fetch upstream
+```
+
+4. Create a new branch to work from
+
+```shell
+git checkout -b branchname
+```
+
+5. Activate a virtual environment
 
 ```shell
 python -m venv venv
@@ -52,18 +70,32 @@ python -m venv venv
 `source ./venv/bin/activate`
 ```
 
-3. Install the package as editable
+6. Install the package as editable
 
 ```shell
 # Install from the cloned repo:
-%pip install -e <your/path/here>
+%pip install -e your/local/path
 ```
 
-I like using Jupyter Notebook (Anaconda) because if you run `%loadext autoreload` then `%aimport hommmer` the module will auto-reload on every saved change to your local package.
+I like working from Jupyter Notebook (Anaconda) because if you run `%loadext autoreload` then `%aimport hommmer` the module will auto-reload on every saved change to your local package.
+
+7. Make your changes / contributions
+
+Make sure to follow the code style of the project, run any tests (if available) and add / update the documentation as needed.
+
+Squash your commits with git's [interactive rebase](http://git-scm.com/docs/git-rebase) (create a new branch if necessary). Write your commit messages in the present tense (what does it does to the code?). Push your changes to your fork on GitHub, the remote `origin`.
+
+```shell
+# Squash commits, fix up commit messages etc.
+git rebase -i origin/main
+
+# Push to your fork on GitHub
+git push origin main
+```
 
 ### Pull Request
 
-When you're done making the changes, open a pull request, often referred to as a PR.
+When you're done making the changes, open a pull request, often referred to as a PR. You do this in GitHub from your Fork of the project. Target the `develop` branch if there is one, else go for `main`.
 
 - Fill out the PR description summarizing your changes so we can review your PR. This template helps reviewers understand your changes and the purpose of your pull request.
 - Don't forget to [link PR to issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue) if you are solving one.
@@ -71,6 +103,7 @@ When you're done making the changes, open a pull request, often referred to as a
 - We may ask for changes to be made before a PR can be merged, either using [suggested changes](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/incorporating-feedback-in-your-pull-request) or pull request comments. You can apply suggested changes directly through the UI. You can make any other changes in your fork, then commit them to your branch.
 - As you update your PR and apply changes, mark each conversation as [resolved](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request#resolving-conversations).
 - If you run into any merge issues, checkout this [git tutorial](https://lab.github.com/githubtraining/managing-merge-conflicts) to help you resolve merge conflicts and other issues.
+- Once the pull request is approved and merged you can pull the changes from upstream to your local repo and delete your extra branch(es).
 
 ### Your PR is merged!
 
