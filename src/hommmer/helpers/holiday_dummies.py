@@ -1,6 +1,6 @@
 import pandas as pd
 
-def create_holiday_dummies(df):
+def holiday_dummies(df):
     dr = pd.date_range(start=df['date'].min(), end=df['date'].max())
     date_df = pd.DataFrame({'date': dr})
     for _, row in df.iterrows():
