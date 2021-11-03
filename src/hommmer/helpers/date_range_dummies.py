@@ -1,6 +1,6 @@
 import pandas as pd
 
-def create_date_range_dummies(df):
+def date_range_dummies(df):
     dr = pd.date_range(start=df['start'].min(), end=df['end'].max())
     
     date_df = pd.DataFrame({'date': dr})
