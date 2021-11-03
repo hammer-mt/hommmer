@@ -4,7 +4,7 @@ Thank you for investing your time in contributing to our project! Any contributi
 
 ## New contributor guide
 
-See the [README](README.md) to get an overview of the project.
+See the [README](README.md) to get an overview of the project. Ideas for improvement are in [TODO](TODO.md). We're operating under the MIT Open Source [license](LICENSE) so you can still use anything you contribute (but so can the rest of us).
 
 ## Getting started
 
