@@ -1,0 +1,195 @@
+## Sources
+
+Wherever we use code directly we reference it in the code comments, but this content gave us inspiration for the project more generally.
+
+- [Facebook Robyn](https://facebookexperimental.github.io/Robyn/) – variable transformations, mission
+- [Bayesian Media Mix Modeling using PyMC3, for Fun and Profit](https://engineering.hellofresh.com/bayesian-media-mix-modeling-using-pymc3-for-fun-and-profit-2bd4667504e6) – bayesian methods, process
+- [Bayesian Methods for Media Mix Modeling with Carryover and
+  Shape Effects](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/46001.pdf) – bayesian methods, variable transformations
+- [Bayesian Methods for Hackers](https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers) – how to build bayesian models, PyMC3
+- [Statistical Rethinking: A Bayesian Course Using R and Stan](https://github.com/rmcelreath/statrethinking_winter2019) – how to interpret bayesian stats, STAN
+- [A Hierarchical Bayesian Approach to Improve Media Mix Models Using Category Data](https://research.google/pubs/pub45999/) – hierarchical models
+- [Introduction to Bayesian Methods for MMM](https://getrecast.com/bayesian-methods-for-mmm/) – running Bayesian MMM, variable distributions
+- [Feature Selection For Machine Learning in Python](https://machinelearningmastery.com/feature-selection-machine-learning-python/) – feature selection
+- [The Five Linear Regression Assumptions: Testing on the Kaggle Housing Price Dataset](https://boostedml.com/2018/08/testing-linear-regression-assumptions-the-kaggle-housing-price-dataset.html) – statistical tests
+- [A Complete Guide To Linear Regression In Python](<[https://](https://www.listendata.com/2018/01/linear-regression-in-python.html)>) – standard linear regression
+- [Advertising Adstock – Concept & Formula](https://analyticsartist.wordpress.com/2013/11/02/calculating-adstock-effect/) – adstocks
+- [Advertising Diminishing Returns & Saturation](https://analyticsartist.wordpress.com/2015/03/08/advertising-diminishing-returns-saturation/) – diminishing returns
+- [Building and Validating Media Mix Models](https://github.com/mecommerce/ThirdLove-Tech-Blog/blob/master/Media_Mix_Model/ThirdLove_MMM_Whitepaper.pdf) – process, history of MMM
+- [Market Mix Modeling using Sales data](https://www.kaggle.com/imdineshgrewal/market-mix-modeling-using-sales-data) – canonical example of MMM on Kaggle
+- [DT MART: Market Mix Modeling](https://www.kaggle.com/datatattle/dt-mart-market-mix-modeling) – data cleaning, process
+- [Multiple Regression with Google Sheets XL Miner](https://www.youtube.com/watch?v=YhBU92eyNRo) – inspired my first post on MMM, "[Econometrics in GSheets](https://www.saxifrage.xyz/post/econometrics-gsheets)"
+- [How to create a basic Marketing Mix Model in scikit-learn](https://practicaldatascience.co.uk/machine-learning/how-to-create-a-basic-marketing-mix-model-in-scikit-learn) – using multiple algos, scikit learn
+- [Python/STAN Implementation of Multiplicative Marketing Mix Model](https://towardsdatascience.com/python-stan-implementation-of-multiplicative-marketing-mix-model-with-deep-dive-into-adstock-a7320865b334) – multiplicative models, seasonality
+- [Carryover and Shape Effects in Media Mix Modeling: Paper Review](https://towardsdatascience.com/carryover-and-shape-effects-in-media-mix-modeling-paper-review-fd699b509e2d) – Bayesian, PyMC3, adstocks & diminishing returns
+- [Modeling adstock using Weibull transformations](https://github.com/annalectnl/weibull-adstock/blob/master/adstock_weibull_annalect.pdf) – Adstocks
+- [Media mix models are the future of mobile advertising](https://mobiledevmemo.com/media-mix-models-are-the-future-of-mobile-advertising/) – trends, history, context, strategy
+- [Geo-level Bayesian Hierarchical Media Mix Modeling](https://research.google/pubs/pub46000/) – geo models
+- [Challenges and Opportunities in Media Mix Modeling](https://research.google/pubs/pub45998/) – trends, history, context, strategy
+- [Meet the geniuses behind our BI tool BigBrain](https://engineering.monday.com/meet-the-geniuses-behind-our-bi-tool-bigbrain/) – real world usage
+- [Market Mix Model - ElecKart | Kaggle](https://www.kaggle.com/goyalshalini93/market-mix-model-eleckart) – process, data cleaning
+
+## Reading List
+
+Here's everything we have collected on our list to read, but haven't had a chance to yet. Feel free to add to the list or let us know if something isn't worth our time.
+
+- https://www.facebook.com/fbgaminghome/blog/marketers/the-future-is-modeled
+- https://www.microprediction.com/blog/prophet
+- https://www.youtube.com/watch?v=B7ZWehBHVw0
+- https://www.latticeworkinsights.com/press/we-evaluated-3-media-mix-models-so-you-dont-have-to
+- https://ekimetrics.com/wp-content/uploads/2020/05/Ekimetrics_Facebook_White-paper.pdf?fbclid=IwAR1mvLJ8zcVO567q-3nv21c2DF57kA_eAQWRp1KI4a56eDYGMIPIQ1ieduI
+- https://www.marketingevolution.com/marketing-essentials/media-mix-modeling
+- https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Weibull.html?fbclid=IwAR0Fygnw1TtxYckg9IYDPPhWwAYrdY666l0Tw0RAJvBhsxanm91uSB3SZP4
+- https://blog.brandops.io/tracking-brand-and-demand-the-4-methods-placeholder-title
+- https://research.google/pubs/pub41854/
+- https://www.facebook.com/fbgaminghome/blog/marketers/the-future-is-modeled
+- https://www.adroll.com/blog/marketing-analytics/first-last-touch-attribution-why-its-out-of-style
+- https://blackwoodseven.com/the-next-generation-of-marketing-mix-modeling-is-bayesian/
+- https://www.youtube.com/watch?v=UznM_-_760Y
+- https://www.facebook.com/business/news/insights/5-ways-to-adjust-marketing-mix-models-for-unexpected-events
+- https://www.forbes.com/sites/forbesagencycouncil/2020/05/18/digital-marketing-in-a-cookie-less-internet/?sh=7fa7bc3121e2
+- https://motamem.org/wp-content/uploads/2019/07/Borden-1984_The-concept-of-marketing-mix.pdf
+- https://www.youtube.com/watch?v=UznM_-_760Y&t=908s
+- https://www.youtube.com/watch?v=p-YbHMCUycw
+- https://www.warc.com/newsandopinion/opinion/the-econometric-hero-and-five-questions-every-cmo-should-ask-about-mmm/4214?es_id=13fa7619cd
+- https://www2.deloitte.com/content/dam/Deloitte/es/Documents/estrategia/Deloitte-es-estrategia-y-operaciones-combinacion-mmm-cle.pdf
+- https://www.thinkwithgoogle.com/intl/en-gb/marketing-strategies/data-and-measurement/roi-marketing-mix-models/
+- https://www.nielsen.com/us/en/insights/article/2017/when-it-comes-to-advertising-effectiveness-what-is-key/
+- https://stackoverflow.com/questions/21765794/python-constrained-non-linear-optimization
+- https://towardsdatascience.com/efficient-frontier-portfolio-optimisation-in-python-e7844051e7f
+- https://medium.com/analytics-vidhya/marketing-mix-model-guide-with-dataset-using-python-r-and-excel-4e319be47b4
+- https://www.ashokcharan.com/Marketing-Analytics/~mx-mmm-sales-response-function.php
+- https://justrthings.com/2017/12/30/a-multivariate-approach-to-adstock-rate-modeling-in-r/
+- http://www.17bigdata.com/robyn-mmm-step-by-step-guide-a-beta-project-from-facebook-marketing-science/
+- https://www.themarketingtechnologist.co/the-gam-approach-to-spend-your-money-more-efficiently/
+- https://multithreaded.stitchfix.com/blog/2015/07/30/gam/
+- https://rstudio-pubs-static.s3.amazonaws.com/294627_5f7e9a449b6c442e806a4743f1b4f8a7.html
+- https://www.facebook.com/business/news/insights/considerations-for-creating-modern-marketing-mix-models
+- https://www.listendata.com/2019/09/marketing-mix-modeling.html
+- https://towardsdatascience.com/building-a-simple-marketing-mix-model-with-ols-571ac3d5b64f
+- https://www.facebook.com/business/news/insights/a-full-funnel-approach-how-brand-marketing-drive-short-term-sales
+- https://quantmar.com/8/What-is-media-mix-modeling
+- https://aaltodoc.aalto.fi/handle/123456789/26743
+- https://www.forbes.com/sites/scottmcdonald1/2018/01/23/measuring-the-roi-of-marketing-ab-tests-vs-market-mix-models-vs-multi-touch-attribution/
+- https://www.iab.com/insights/the-essential-guide-to-marketing-mix-modeling-and-multi-touch-attribution/
+- https://link.springer.com/article/10.1057/jma.2014.3
+- https://danaleeling.blogspot.com/2019/09/graphical-confidence-intervals-for.html
+- https://www.certificationanswers.com/en/a-marketing-manager-wants-to-use-an-attribution-model-that-includes-both-converting-and-non-converting-paths-in-order-to-evaluate-individual-customer-paths-which-attribution-model-will-fulfill-this-r/
+- https://towardsdatascience.com/market-mix-modeling-mmm-101-3d094df976f9
+- https://wiki.q-researchsoftware.com/wiki/Driver_(Importance)_Analysis
+- https://www.real-statistics.com/multiple-regression/multiple-regression-analysis/multiple-regression-analysis-excel/
+- https://www.forbes.com/sites/onmarketing/2012/11/28/the-downside-of-marketing-mix-models-is-theres-no-upside-for-cmos/
+- https://sd-group.com.au/en/blog/market-mix-vs-multi-touch-attribution-model
+- https://www.slideshare.net/wolfeman02/shows-approach-which-expands-the-breadth-of-what-marketingmix-models-c
+- https://bottomlineanalytics.com/brand-content-drivers-modeling-optimizing-content-marketing/
+- https://www.slideshare.net/PeterCain1/dynamic-marketing-mix-modelling
+- https://blog.hurree.co/blog/marketing-mix-modeling
+- https://www.analytic-edge.com/is-marketing-mix-modeling-only-for-fortune-500-companies-think-again/
+- https://towardsdatascience.com/causal-vs-statistical-inference-3f2c3e617220
+- https://www.futuremarketinsights.com/reports/marketing-mix-optimisation-market
+- https://uk.news.yahoo.com/success-story-marketing-mix-modeling-130500042.html
+- https://uk.sganalytics.com/case-study/analytics/market-mix-modeling-what-if-simulator-insurance/
+- https://www.slideshare.net/vivastream/disney-marketinganalyticsoptimization-14907727
+- https://www.thinkwithgoogle.com/intl/en-145/marketing-strategies/video/through-marketing-mix-modeling-loreal-uncovers-youtubes-ability-deliver-sales/
+- https://www.jogordonconsulting.com/blog/marketing-mix-modelling-3-case-studies-from-2020
+- https://marketingeffectiveness.nielsen.com/our-solutions/marketing-mix-modeling/
+- https://www.ashokcharan.com/Marketing-Analytics/~mx-mmm-what-if-analysis.php
+- https://www.wsj.com/articles/SB112415492969313998
+- https://videoadnews.com/2020/09/14/econometric-modelling-in-advertising-explained/
+- https://www.ebiquity.com/news-insights/blog/can-econometrics-prove-the-value-of-influencers/
+- https://www.jstor.org/stable/3149922?seq=1
+- https://www.jstor.org/stable/3151017?seq=1
+- https://www.sequentpartners.com/case-studies-in-holistic-marketing-mix-modeling/
+- https://www.treasuredata.com/resources/a-forbes-cmo-practice-report-for-marketing-effectiveness/
+- https://www.thedrum.com/opinion/2020/03/16/marketing-mix-marketing-effect-modelling
+- https://www.marketingevolution.com/knowledge-center/changing-approach-to-marketing-mix-modeling
+- https://nathanbrixius.wordpress.com/2013/11/26/marketing-mix-i/
+- https://www.scanmarqed.com/marketing-mix-modeling
+- https://www.cmswire.com/cms/customer-experience/forrester-wave-highlights-marketing-mix-modeling-vendors-021092.php
+- https://www.linkedin.com/pulse/death-marketing-mix-modeling-we-know-michael-wolfe/
+- https://www.sellforte.com/marketing-mix-modeling
+- https://towardsdatascience.com/market-mix-modeling-101-part-2-95c5e147c8a3
+- https://www.arymalabs.com/Blogs.aspx
+- https://www.nielsen.com/uk/en/solutions/capabilities/marketing-mix-modeling/
+- https://web.archive.org/web/20190327101933/https://www.tvba.co.uk/article/route-to-market-finding-the-back-door-to-tough-markets
+- https://fospha.com/case-studies/joined-up-strategy-driven-by-marketing-mix-modelling
+- https://www.businesswire.com/news/home/20200602005541/en/How-Marketing-Mix-Modeling-Helped-a-Food-and-Beverage-Company-to-Gain-Visibility-into-Consumer-Buying-Behavior-A-Case-Study-by-Quantzig
+- https://www.businesswire.com/news/home/20200807005016/en/Success-Story---Marketing-mix-modeling-helps-increase-MROI-for-a-US-based-telecommunication-service-provider-Quantzig
+- https://www.thinkwithgoogle.com/marketing-strategies/data-and-measurement/marketing-mix-modeling-tutorial/
+- https://rstudio-pubs-static.s3.amazonaws.com/294627_5f7e9a449b6c442e806a4743f1b4f8a7.html
+- http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41854.pdf
+- https://www.listendata.com/2019/09/marketing-mix-modeling.html
+- https://hbr.org/2013/03/advertising-analytics-20
+- https://aaltodoc.aalto.fi/handle/123456789/26743
+- https://towardsdatascience.com/how-to-revise-your-marketing-mix-model-to-capture-covid-19-impact-863b65982408
+- https://www.youtube.com/playlist?list=PLwJRxp3blEvZyQBTTOMFRP_TDaSdly3gU
+- https://c3metrics.com/whats-the-difference-between-mmm-mta/
+- https://medium.com/@gustavobramao/mmm-vs-gbhmmm-ebe537ccf15b
+- https://blog.hurree.co/blog/marketing-mix-modeling
+- https://towardsdatascience.com/explaining-feature-importance-by-example-of-a-random-forest-d9166011959e
+- https://www.marketingattribution.com/marketing-mix-models/
+- https://bottomlineanalytics.com/our-thinking/
+- https://economagician.co/2014/05/30/an-example-of-a-bad-market-mix-model/
+- https://towardsdatascience.com/machine-learning-vs-econometrics-in-the-real-world-4058095b1013
+- https://www.cmswire.com/cms/customer-experience/forrester-wave-highlights-marketing-mix-modeling-vendors-021092.php
+- https://blog.hurree.co/blog/marketing-mix-modeling
+- https://services.google.com/fh/files/misc/article_marketing_mix_modeling_final.pdf
+- https://marketingeffectiveness.nielsen.com/our-solutions/marketing-mix-modeling/
+- https://www.latentview.com/marketing-mix-modeling/
+- https://www.investopedia.com/terms/e/econometrics.asp
+- https://www.ashokcharan.com/Marketing-Analytics/~mx-mmm-what-if-analysis.php
+- https://www.nielsen.com/sa/en/insights/article/2019/5-important-questions-to-ask-your-marketing-mix-vendor/
+- https://www.marketingiq.co.uk/tv-media-planning-terms-calculating-media-reach-and-frequency-using-tvrs/
+- https://towardsdatascience.com/predicting-sales-611cb5a252de
+- https://www.cpgdatainsights.com/answer-business-questions/volume-decomp-part-1/
+- https://www.thinkbox.tv/research/demand-generator/
+- https://www.quora.com/What-kind-of-econometrics-can-I-do-with-Python
+- https://www.jstor.org/stable/40206298
+- http://www.upfie.net/
+- https://medium.com/@vince.shields913/econometrics-with-python-pt-1-646b6eeff7da
+- https://www.kdnuggets.com/2018/12/machine-learning-explainability-interpretability-ai.html
+- https://www.kaggle.com/learn/machine-learning-explainability
+- https://towardsdatascience.com/an-overview-of-model-explainability-in-modern-machine-learning-fc0f22c8c29a
+- https://stats.stackexchange.com/questions/150975/linear-regression-with-diminishing-returns
+- https://stats.stackexchange.com/questions/27185/whether-to-include-x-and-x2-in-regression-model-examining-diminishing-retur
+- https://stats.stackexchange.com/questions/80559/why-is-functional-form-so-important-when-specifying-models/80563#80563
+- https://www.dummies.com/education/economics/econometrics/the-linear-log-model-in-econometrics/
+- https://stats.stackexchange.com/questions/356117/how-to-fit-exponential-y-a1-expbx-function-to-a-given-data-set-especially
+- http://www.real-statistics.com/regression/exponential-regression-models/exponential-regression/
+- https://stats.idre.ucla.edu/stata/dae/multivariate-regression-analysis/
+- https://www.kaggle.com/fayejavad/marketing-linear-multiple-regression
+- https://towardsdatascience.com/perform-regression-diagnostics-and-tackle-uncertainties-of-linear-models-1372a03b1f56
+- https://towardsdatascience.com/fisher-test-for-regression-analysis-1e1687867259
+- https://www.coursera.org/lecture/uva-darden-market-analytics/marketing-mix-models-XCCSf
+- https://www.kaggle.com/rishph7/market-mix-model
+- https://github.com/palitr/Budget-Optimization-in-Ecommerce-using-Market-Mix-Modelling
+- https://towardsdatascience.com/market-mix-modelling-application-with-mlr-60b18bd3dc81
+- https://sites.google.com/site/2015pcsu/data-science/marketing-mix-modeling-to-find-the-best-advertising-route
+- http://www.andrewwalterowens.com/post/111019666926/marketing-mix-modeling-using-statsmodels-part-1
+- http://arxiv.org/ftp/arxiv/papers/1403/1403.7971.pdf
+- https://medium.com/swlh/marketing-mix-modelling-step-by-step-part-1-702c793d91fd
+- https://analyticsartist.wordpress.com/2014/08/17/marketing-mix-modeling-explained-with-r/
+- http://datafeedtoolbox.com/marketing-mix-model-for-all-using-r-for-mmm/
+- https://www.datasciencecentral.com/profiles/blogs/market-mix-modeling-mmm
+- https://rpubs.com/nihil0/mmm01
+- https://www.rdocumentation.org/packages/bayesm/versions/3.0-2/topics/cheese
+- https://www.quora.com/Marketing-mix-modelling-What-are-the-best-and-most-practical-statistical-techniques-to-use-for-MMM
+- https://medium.com/@yasimk_87248/marketing-mix-modeling-for-marketers-de406a988757
+- https://web.archive.org/web/20200525194505/https://online-behavior.com/analytics/statistical-significance
+- https://proofanalytics.ai/how-it-works-automated-mmm/
+- https://www.measured.com/products
+- https://mma.com/solutions/marketing-mix-modeling/
+- https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html
+- https://www.datacamp.com/community/tutorials/tutorial-ridge-lasso-elastic-net
+  https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFE.html
+- https://towardsdatascience.com/marketing-channel-attribution-with-markov-chains-in-python-part-2-the-complete-walkthrough-733c65b23323
+- https://medium.com/@mortenhegewald/marketing-channel-attribution-using-markov-chains-101-in-python-78fb181ebf1e
+- https://stats.stackexchange.com/questions/74622/converting-standardized-betas-back-to-original-variables
+- https://stattrek.com/multiple-regression/interaction.aspx
+- https://stackoverflow.com/questions/31029340/how-to-adjust-scaled-scikit-learn-logicistic-regression-coeffs-to-score-a-non-sc
+- https://www.youtube.com/watch?v=68ABAU_V8qI
+- https://medium.com/towards-artificial-intelligence/understanding-non-linear-regression-fbef9a396b71
+- https://www.advancedwebranking.com/ctrstudy/
+- https://realpython.com/simpy-simulating-with-python/
+- https://www.searchviu.com/en/machine-learning-seo-predicting-rankings/
+- https://www.forbes.com/sites/gilpress/2016/03/23/data-preparation-most-time-consuming-least-enjoyable-data-science-task-survey-says/?sh=3b7582c86f63
