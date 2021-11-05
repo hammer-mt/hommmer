@@ -31,5 +31,9 @@ from .cat_to_dummies import cat_to_dummies
 from .drop_cols import drop_cols
 from .convert_date import convert_date
 from .drop_n_rows import drop_n_rows
+from .count_na import count_na
+from .count_na_cols import count_na_cols
+from .interpolate_dates import interpolate_dates
+from .count_dup_cols import count_dup_cols
 
 
