@@ -84,6 +84,10 @@ All user input should be treated as error. Everything needs a good default.
 
 Where there's a choice between optimization and usefullness, take the latter.
 
+### 4. Better data beats fancier algorithms
+
+We focus on helper functions to clean data, and treat algorithms as commodities.
+
 ## Contributors
 
 These people are building `hommmer` for fun in their spare time. Cheers! 🍻

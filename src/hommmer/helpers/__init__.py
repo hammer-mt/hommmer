@@ -19,5 +19,13 @@ from .unstack_data import unstack_data
 from .week_commencing import week_commencing
 from .categorize_campaigns import categorize_campaigns
 from .merge_data import merge_data
+from .guess_date_column import guess_date_column
+from .guess_y_column import guess_y_column
+from .guess_media_columns import guess_media_columns
+from .add_X_labels import add_X_labels
+from .del_X_labels import del_X_labels
+from .get_all_X_labels import get_all_X_labels
+from .get_cols_containing import get_cols_containing
+
 
 
