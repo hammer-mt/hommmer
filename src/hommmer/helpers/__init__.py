@@ -26,6 +26,10 @@ from .add_X_labels import add_X_labels
 from .del_X_labels import del_X_labels
 from .get_all_X_labels import get_all_X_labels
 from .get_cols_containing import get_cols_containing
-
+from .str_to_dummy import str_to_dummy
+from .cat_to_dummies import cat_to_dummies
+from .drop_cols import drop_cols
+from .convert_date import convert_date
+from .drop_n_rows import drop_n_rows
 
 
