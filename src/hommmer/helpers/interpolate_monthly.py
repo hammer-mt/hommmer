@@ -16,10 +16,14 @@ def interpolate_monthly(df, date_col=None, resample_col=None):
     data['end_of_month'] = pd.to_datetime(data['start_of_month']) + pd.offsets.MonthEnd(1)
     data['days_in_month'] = (data['end_of_month'] - data['start_of_month']).dt.days + 1
     data[resample_col] = data[resample_col] / data['days_in_month']
-    reindexed = data.set_index("start_of_month")
-    reindexed = reindexed.reindex(pd.date_range(start=reindexed.index.min(),
-                                        end=reindexed.end_of_month.max(),
-                                        freq='1D'))
+    data['date'] = data['start_of_month']
+
+    dr = pd.date_range(start=data.start_of_month.min(),
+                                        end=data.end_of_month.max(),
+                                        freq='1D')
+    date_df = pd.DataFrame({'date': dr})
+    merged = date_df.merge(data, how='left', on='date')
+    reindexed = merged.set_index('date')
     
     resampled = reindexed[resample_col]
     resampled.replace({0:np.nan}, inplace=True)
