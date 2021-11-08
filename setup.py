@@ -17,7 +17,8 @@ INSTALL_REQUIRES = [
     "matplotlib",
     "statsmodels",
     "typing",
-    "sklearn"
+    "sklearn",
+    "seaborn"
 ]
 setup(name=PACKAGE_NAME,
     version=VERSION,

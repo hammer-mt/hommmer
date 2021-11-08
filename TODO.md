@@ -8,3 +8,5 @@
 - rainbox test
 - harvey collier test
 - goldfeld quandt test
+- margin of error / ci
+- principal components

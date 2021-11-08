@@ -12,7 +12,6 @@ from .interpolate_weekly import interpolate_weekly
 from .make_column_index import make_column_index
 from .remove_outliers import remove_outliers
 from .rename_column import rename_column
-from .search_trends import search_trends
 from .start_of_month import start_of_month
 from .transpose_data import transpose_data
 from .unstack_data import unstack_data
@@ -35,5 +34,7 @@ from .count_na import count_na
 from .count_na_cols import count_na_cols
 from .interpolate_dates import interpolate_dates
 from .count_dup_cols import count_dup_cols
+from .modify_labels import modify_labels
+from .describe_data import describe_data
 
 

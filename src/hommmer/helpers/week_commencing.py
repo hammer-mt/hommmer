@@ -18,4 +18,4 @@ def week_commencing(date_str=None, date_format="%Y-%m-%d"):
     monday = dt.datetime.strptime(f"{year_week}-1", "%Y-%W-%w")
 
     # return the monday date in the same format
-    return dt.datetime.strptime(monday, date_format)
+    return dt.datetime.strftime(monday, date_format)

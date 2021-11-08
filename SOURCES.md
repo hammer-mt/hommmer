@@ -28,11 +28,14 @@ Wherever we use code directly we reference it in the code comments, but this con
 - [Challenges and Opportunities in Media Mix Modeling](https://research.google/pubs/pub45998/) – trends, history, context, strategy
 - [Meet the geniuses behind our BI tool BigBrain](https://engineering.monday.com/meet-the-geniuses-behind-our-bi-tool-bigbrain/) – real world usage
 - [Market Mix Model - ElecKart | Kaggle](https://www.kaggle.com/goyalshalini93/market-mix-model-eleckart) – process, data cleaning
+- [Data Science Primer | Elite Data Science](https://elitedatascience.com/primer) – data cleaning, process, algorithms = commodities, better data > fancier algorithms
+- [How to Calculate Feature Importance With Python](https://machinelearningmastery.com/calculate-feature-importance-with-python/) – feature importances, feature selection
 
 ## Reading List
 
 Here's everything we have collected on our list to read, but haven't had a chance to yet. Feel free to add to the list or let us know if something isn't worth our time.
 
+- https://github.com/dps/montesheet
 - https://www.facebook.com/fbgaminghome/blog/marketers/the-future-is-modeled
 - https://www.microprediction.com/blog/prophet
 - https://www.youtube.com/watch?v=B7ZWehBHVw0
