@@ -2,7 +2,7 @@ import numpy as np
 
 # https://github.com/annalectnl/weibull-adstock/blob/master/adstock_weibull_annalect.pdf
 # https://towardsdatascience.com/python-stan-implementation-of-multiplicative-marketing-mix-model-with-deep-dive-into-adstock-a7320865b334
-def apply_weibull_delayed(x, window, k, p):
+def weibull_adstock_delayed(x, window, k, p):
     '''
     params:
     x: original media variable, array

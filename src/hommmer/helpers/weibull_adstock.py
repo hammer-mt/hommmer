@@ -2,7 +2,7 @@ import numpy as np
 
 # https://github.com/annalectnl/weibull-adstock/blob/master/adstock_weibull_annalect.pdf
 # https://towardsdatascience.com/python-stan-implementation-of-multiplicative-marketing-mix-model-with-deep-dive-into-adstock-a7320865b334
-def apply_weibull(x, window, k):
+def weibull_adstock(x, window, k):
     '''
     params:
     x: original media variable, array

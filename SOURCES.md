@@ -202,3 +202,4 @@ Here's everything we have collected on our list to read, but haven't had a chanc
 - https://analyticsartist.wordpress.com/2014/01/31/adstock-rate-deriving-with-analytical-methods/
 - https://storage.googleapis.com/pub-tools-public-publication-data/pdf/b20467a5c27b86c08cceed56fc72ceadb875184a.pdf
 - https://github.com/psu4/Marketing-Mix-Modeling-/blob/master/Marketing-Mix-Modeling.py
+- https://medium.com/swlh/marketing-response-curves-the-science-of-diminishing-returns-and-saturation-f8cf226e8dc5
