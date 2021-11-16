@@ -196,3 +196,9 @@ Here's everything we have collected on our list to read, but haven't had a chanc
 - https://realpython.com/simpy-simulating-with-python/
 - https://www.searchviu.com/en/machine-learning-seo-predicting-rankings/
 - https://www.forbes.com/sites/gilpress/2016/03/23/data-preparation-most-time-consuming-least-enjoyable-data-science-task-survey-says/?sh=3b7582c86f63
+- https://arxiv.org/pdf/2106.03322.pdf
+- https://medium.com/@Marko_Mi/advertising-adstock-theory-85cc9e26ea0e
+- http://www.17bigdata.com/python-stan-implementation-of-multiplicative-marketing-mix-model/
+- https://analyticsartist.wordpress.com/2014/01/31/adstock-rate-deriving-with-analytical-methods/
+- https://storage.googleapis.com/pub-tools-public-publication-data/pdf/b20467a5c27b86c08cceed56fc72ceadb875184a.pdf
+- https://github.com/psu4/Marketing-Mix-Modeling-/blob/master/Marketing-Mix-Modeling.py

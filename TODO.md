@@ -10,3 +10,6 @@
 - goldfeld quandt test
 - margin of error / ci
 - principal components
+- shuffle dataset sklearn.utils
+- gradientboostingregressor
+- plot partial dependence
