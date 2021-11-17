@@ -18,11 +18,7 @@ import hommmer as mmm
 media = ['facebook_spend', 'google_spend', 'tiktok_spend']
 
 # build the model
-model = mmm.build(
-  'duff.csv',
-  'beer_sales',
-  media
-)
+model = mmm.build('duff.csv', 'beer_sales', media)
 ```
 
 #### Required
@@ -55,11 +51,11 @@ Our solution is fully automated, but if you want to build a model manually, or u
 
 ```python
 import hommmer as mmm
-from mmm.helpers import transpose
+from mmm.cleaners import transpose
 from mmm.features import adstocks
 from mmm.charts import accuracy
 from mmm.metrics import nrsme
-from mmm.models import linear
+from mmm.models import Linear
 ```
 
 ## About hommmer

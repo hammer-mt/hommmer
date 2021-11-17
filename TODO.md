@@ -1,10 +1,8 @@
 # Todo List
 
 - multiplier rules by channel
-- bayesian mmm
-- weibull adstocks
-- multiplicative model
-- embedded modeling
+- bayesian MCMC
+- embedded / hierarchical modeling
 - rainbox test
 - harvey collier test
 - goldfeld quandt test
@@ -13,3 +11,35 @@
 - shuffle dataset sklearn.utils
 - gradientboostingregressor
 - plot partial dependence
+- cascading benchmark priors
+- model calibration with lift / geo tests
+- rollback update windows
+- creative scorecard grading
+- nevergrad hyperparameter optimization
+- train test split
+- cross validation
+- simulated annealing feature selection with random hill jumping
+- forward feature selection
+- automated anomaly dummies
+- model pipelines
+- etl connectors (facebook, google, etc)
+- expected value of information gain
+- geo interpolation
+- automated time lags
+- simulator model training
+- naive baseline validation
+- dummy baseline validation
+- nvar incremental shading feature selection (1 var models, 2 var models, etc)
+- kpi tree rollup models
+- gaap accounting for MMM
+- cohort time to value
+- scaling values
+- post-selection inference
+- principal component analysis
+- original correlated variables
+- AIC / BIC selection critera
+- channel deprivation chart
+- pareto front chart
+- decomposition waterfall chart
+- share of spend vs share of effect chart
+- response curves chart

@@ -1,4 +1,4 @@
-date,beer_sales,facebook_spend,tiktok_spend,google_spend,emails_sent,blog_traffic,search_trends,sold_out
+date,sales,facebook,tiktok,google,emails,blog,search,sold_out
 2029-12-31,1976,0,0,1580.74,184,322,100,0
 2030-01-07,722,0,0,196.73,0,447,65,0
 2030-01-14,800,0,0,498.89,0,469,57,0

@@ -10,3 +10,4 @@ from .mape import mape
 from .mse import mse
 from .rmse import rmse
 from .degrees_of_freedom import degrees_of_freedom
+from .decomp_rssd import decomp_rssd

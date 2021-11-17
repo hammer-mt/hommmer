@@ -1,7 +1,7 @@
 from sklearn import linear_model
 import pandas as pd
 import matplotlib.pyplot as plt
-def predict_and_plot_response(df, interval, tranformer, **kwargs):
+def response(df, interval, tranformer, **kwargs):
     df['spend_transformed'] = tranformer(df['spend'], **kwargs)
     predict_y = 'conversions' # variable you're predicting
     dependent_X = ['spend_transformed'] # variables you're using to predict 
