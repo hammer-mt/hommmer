@@ -14,11 +14,14 @@ A simple Marketing Mix Modeling library in Python.
 # import the library
 import hommmer as mmm
 
+# download example data
+mmm.load_duff()
+
 # list media columns
-media = ['facebook_spend', 'google_spend', 'tiktok_spend']
+media = ['facebook', 'google', 'tiktok']
 
 # build the model
-model = mmm.build('duff.csv', 'beer_sales', media)
+model = mmm.build('duff.csv', 'sales', media)
 ```
 
 #### Required
@@ -29,11 +32,9 @@ model = mmm.build('duff.csv', 'beer_sales', media)
 
 #### Optional
 
-- **type**: label your target as 'conversions' or 'value'. default: 'conversions'
-- **date**: the name of the date column. default: 'date'
-- **format**: the format of the date column. default: 'YYYY-MM-DD'
+- **organic**: a list of the organic columns. default: anything in the file not listed in `media`.
 
-Provide at least 1 year of weekly data where the `date` column is the start of the week (Monday).
+Provide at least 1 year of weekly data where the `date` column is the start of the week (Monday) in YYYY-MM-DD format.
 
 ### 3. Use the results
 
@@ -50,12 +51,11 @@ model.save()
 Our solution is fully automated, but if you want to build a model manually, or use our helper functions for cleaning data, you can import from our sublibraries.
 
 ```python
-import hommmer as mmm
-from mmm.cleaners import transpose
-from mmm.features import adstocks
-from mmm.charts import accuracy
-from mmm.metrics import nrsme
-from mmm.models import Linear
+from hommmer.cleaners import transpose
+from hommmer.features import adstocks
+from hommmer.charts import accuracy
+from hommmer.metrics import nrsme
+from hommmer.models import Linear
 ```
 
 ## About hommmer

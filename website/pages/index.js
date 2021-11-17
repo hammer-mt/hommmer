@@ -9,6 +9,7 @@ export default function Home() {
   const quickStartInstructions = [
     { title: "Install the package", code: "pip install hommmer" },
     { title: "Import the library", code: "import hommmer as mmm" },
+    { title: "Download example data", code: "mmm.load_duff()" },
     {
       title: "Build your model",
       code: "media = ['facebook', 'google', 'tiktok']\nmodel = mmm.build('duff.csv', 'sales', media)",
