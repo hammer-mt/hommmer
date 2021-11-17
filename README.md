@@ -32,9 +32,12 @@ model = mmm.build('duff.csv', 'sales', media)
 
 #### Optional
 
-- **organic**: a list of the organic columns. default: anything in the file not listed in `media`.
+- **organic**: a list of the organic columns. default: everything not listed in `media`.
+- **date**: the column with your date labels (YYYY-MM-DD). default: `date`
+- **verbose**: see what the model is doing by printing logs. default: `False`
+- **override**: use custom settings for aspects of the model. default: `{}`
 
-Provide at least 1 year of weekly data where the `date` column is the start of the week (Monday) in YYYY-MM-DD format.
+Provide at least 1 year of weekly data where the `date` column is the start of the week (Monday).
 
 ### 3. Use the results
 
@@ -58,13 +61,19 @@ from hommmer.metrics import nrsme
 from hommmer.models import Linear
 ```
 
+## About Marketing Mix Modeling
+
+Marketing Mix Modeling (MMM) was introduced in the 1960s to match spikes and dips in sales to actions taken in marketing. No user data required - it's privacy-friendly, adblocker-proof and works across all channels (even offline).
+
+What used to be a 3-6 month, $50k+ job for the Fortune 500, is now an always-on, automated source of truth for startups like [Harry's](https://ladder.io/blog/attribution-technique), [HelloFresh](https://engineering.hellofresh.com/bayesian-media-mix-modeling-using-pymc3-for-fun-and-profit-2bd4667504e6) and [Monday․com](https://www.youtube.com/watch?v=p-YbHMCUycw). Even Facebook and Google are getting in on the game with [research papers](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/46001.pdf) and [open-source projects](https://facebookexperimental.github.io/Robyn/).
+
 ## About hommmer
 
-Most Marketing Mix Models (MMM) are built in Excel, because that's simpler than running a script. But there are things you can't do in Excel, like automatically building 1,130 models to see which one works best. We'd like MMM to be in the hands of more people, but that can't happen if you need to be a nuclear physicist to use it.
+Most modeling libraries, like [Statsmodels](https://www.statsmodels.org/stable/index.html), [SciKitLearn](https://scikit-learn.org/stable/) and [Facebook's Robyn](https://facebookexperimental.github.io/Robyn/), cater to statisticians and data scientists. They offer complex configuration options and advanced algorithms only accessible to the biggest companies spending millions on marketing, who can afford to spend 3-6 months on a solution.
 
-Most modeling libraries, like [Statsmodels](https://www.statsmodels.org/stable/index.html), [SciKit Learn](https://scikit-learn.org/stable/) and [Facebook's Robyn](https://facebookexperimental.github.io/Robyn/), are grown in a lab by scientists. They offer complex configuration options and advanced algorithms to cater for the smartest people at the biggest companies spending millions on marketing, who can afford to spend 3-6 months on a solution.
+So most Marketing Mix Modeling by small businesses and startups is [done in Excel](https://www.saxifrage.xyz/post/econometrics-gsheets). But there are things you can't do in Excel, like automatically building 1,130 models to see which one works best. We'd like MMM to be in the hands of more people, but that can't happen if you need to be a nuclear physicist to use it.
 
-`hommmer` is built for the rest of us. The everyman (or woman) modeling hobbyist, for which MMM is just one of many jobs on the todo list. It's designed to be simple to use, but powerful underneath, without getting you into trouble. Over-simplifying things will annoy the statisticians (Doh!), but it'll make allocating budget quick and easy.
+`hommmer` is built for the rest of us. The 'everyman' (of any gender) modeling hobbyist, for which MMM is just one of many jobs on the todo list. It's designed to be simple to use, but powerful underneath, without getting you into trouble. Over-simplifying things will annoy the statisticians (Doh!), but it'll make allocating budget quick and easy.
 
 ## Design Principles:
 

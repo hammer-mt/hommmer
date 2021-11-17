@@ -13,3 +13,4 @@ from .degrees_of_freedom import degrees_of_freedom
 from .decomp_rssd import decomp_rssd
 from .harvey_collier import harvey_collier
 from .rainbox import rainbox
+from .vars_obs import vars_obs

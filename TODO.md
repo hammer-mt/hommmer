@@ -47,3 +47,4 @@
 - export to google slides / powerpoint
 - export to excel / csv
 - export to png / jpeg
+- last x periods train test split
