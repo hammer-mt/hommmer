@@ -4,6 +4,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      visibility: ["hover"],
       colors: {
         "pants-blue": "#70d1fe",
         "skin-yellow": "#fed90f",
