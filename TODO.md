@@ -43,3 +43,7 @@
 - decomposition waterfall chart
 - share of spend vs share of effect chart
 - response curves chart
+- variable histogram chart
+- export to google slides / powerpoint
+- export to excel / csv
+- export to png / jpeg

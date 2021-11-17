@@ -1,6 +1,7 @@
 from sklearn.datasets import make_regression
-import datetime as dt
 import pandas as pd
+
+from .make_dates import make_dates
 
 # generate regression dataset
 def make_data(target_name="y", num_variables=5, num_significant=4, num_observations=180, noise=30):
@@ -22,5 +23,8 @@ def make_data(target_name="y", num_variables=5, num_significant=4, num_observati
 
     # Add target data
     df[target_name] = target
+
+    # Add dates
+    df['date'] = make_dates(days=num_observations)
 
     return df

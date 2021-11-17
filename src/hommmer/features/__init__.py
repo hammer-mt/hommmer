@@ -9,3 +9,9 @@ from .s_curve_saturation import s_curve_saturation
 from .scaled_saturation import scaled_saturation
 from .weibull_adstock import weibull_adstock
 from .weibull_adstock_delayed import weibull_adstock_delayed
+from .interaction import interaction
+from .lag import lag
+from .vif import vif
+from .ffe import ffe
+from .bif import bif
+from .rfe import rfe
