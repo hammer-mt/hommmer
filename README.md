@@ -2,6 +2,8 @@
 
 A simple Marketing Mix Modeling library in Python.
 
+\*\*\* **_NOTE: this library is in alpha and not yet working._** \*\*\*
+
 ## Quick start
 
 ### 1. Install the library

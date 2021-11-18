@@ -48,3 +48,5 @@
 - export to excel / csv
 - export to png / jpeg
 - last x periods train test split
+- seasonality with facebook prophet
+- national holidays by country
