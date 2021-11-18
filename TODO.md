@@ -50,3 +50,5 @@
 - last x periods train test split
 - seasonality with facebook prophet
 - national holidays by country
+- fix mapes div/0 with + np.finfo(float).eps
+- walk forward validation

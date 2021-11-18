@@ -14,3 +14,10 @@ from .decomp_rssd import decomp_rssd
 from .harvey_collier import harvey_collier
 from .rainbox import rainbox
 from .vars_obs import vars_obs
+from .mdape import mdape
+from .smape import smape
+from .mda import mda
+from .mase import mase
+from .mfe import mfe
+from .log_accuracy_ratio import log_accuracy_ratio
+from .max_error import max_error

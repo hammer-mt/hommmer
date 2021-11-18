@@ -18,7 +18,8 @@ INSTALL_REQUIRES = [
     "statsmodels",
     "typing",
     "sklearn",
-    "seaborn"
+    "seaborn",
+    "prophet"
 ]
 setup(name=PACKAGE_NAME,
     version=VERSION,
