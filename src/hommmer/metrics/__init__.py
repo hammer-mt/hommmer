@@ -21,3 +21,6 @@ from .mase import mase
 from .mfe import mfe
 from .log_accuracy_ratio import log_accuracy_ratio
 from .max_error import max_error
+from .dummy_constant import dummy_constant
+from .dummy_mean import dummy_mean
+from .dummy_median import dummy_median

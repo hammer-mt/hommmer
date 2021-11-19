@@ -52,3 +52,4 @@
 - national holidays by country
 - fix mapes div/0 with + np.finfo(float).eps
 - walk forward validation
+- facebook prophet variable input trend forecasting
