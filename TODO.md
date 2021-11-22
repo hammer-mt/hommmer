@@ -53,3 +53,4 @@
 - fix mapes div/0 with + np.finfo(float).eps
 - walk forward validation
 - facebook prophet variable input trend forecasting
+- forecast on accuracy chart with train test split

@@ -205,3 +205,42 @@ Here's everything we have collected on our list to read, but haven't had a chanc
 - https://github.com/psu4/Marketing-Mix-Modeling-/blob/master/Marketing-Mix-Modeling.py
 - https://medium.com/swlh/marketing-response-curves-the-science-of-diminishing-returns-and-saturation-f8cf226e8dc5
 - https://www.youtube.com/watch?v=4N0FFzGYfTs
+- https://towardsdatascience.com/types-of-interaction-effects-in-market-mix-modeling-mmm-95247f3de36e
+- https://twitter.com/RichardFergie/status/1461653687697387524?s=20
+- read this: http://brucehardie.com/
+- https://betanalpha.github.io/assets/case_studies/falling.html
+- https://betanalpha.github.io/assets/case_studies/pystan_workflow.html
+- https://twiecki.io/blog/2019/01/14/supply_chain/
+- Remake this Statistical Significance code on Saxifrage: https://colab.research.google.com/drive/1DogSh8asM2-13Lv0SC69xRmbQ_DBM5rF?authuser=3
+- Lambda School Inferential Statistics Lecture https://colab.research.google.com/drive/1HWgUTIGiuLqDd2538b0p-Xu4O8WBahZ5?authuser=1
+- Lambda School Inferential Statistics Assignment https://drive.google.com/open?id=1XPYoZesZT0asuZdQjuurKeJgC-Ytl-Xd
+- Bayesian spam filter https://colab.research.google.com/drive/1GKIN_RM3r3JC9R-3AE9ZuyMcPjdG6DH4
+- https://quotefancy.com/quote/2401115/Pedro-Domingos-Each-of-the-five-tribes-of-machine-learning-has-its-own-master-algorithm-a
+- https://github.com/pymc-devs/resources/tree/master/BCM
+- https://github.com/pymc-devs/resources/tree/master/BSM
+- https://github.com/pymc-devs/resources/tree/master/BDA3
+- https://stats.stackexchange.com/questions/500260/pymc3-implementation-of-bayesian-mmm-poor-posterior-inference
+- https://www.youtube.com/watch?v=SWMaoBbIp04
+- https://www.youtube.com/watch?v=7tSFNhQO3jg
+- https://www.youtube.com/watch?v=ZxR3mw-Znzc
+- https://www.youtube.com/watch?v=uxGhjXS3ILE
+- https://www.youtube.com/watch?v=appLxcMLT9Y
+- https://www.youtube.com/watch?v=BrK7X_XlGB8
+- https://www.pymc-labs.io/blog-posts/bayesian-media-mix-modeling-for-marketing-optimization/
+- https://stats.stackexchange.com/questions/500260/pymc3-implementation-of-bayesian-mmm-poor-posterior-inference
+- https://www.pymc-labs.io/blog-posts/reducing-customer-acquisition-costs-how-we-helped-optimizing-hellofreshs-marketing-budget/
+- http://www.joshuakim.io/marketing-mix-modelling-with-bayesian-regression/
+- https://www.coursera.org/learn/bayesian
+- https://statswithr.github.io/book/introduction-to-bayesian-regression.html#sec:simple-linear
+- https://twiecki.io/blog/2017/02/08/bayesian-hierchical-non-centered/
+- https://towardsdatascience.com/bayesian-hierarchical-modeling-in-pymc3-d113c97f5149
+- https://docs.pymc.io/en/stable/pymc-examples/examples/case_studies/multilevel_modeling.html
+- https://twitter.com/tvladeck/status/1462447221304143894?t=Tm9-OmYEQ-QYivzmed7nJQ&s=03
+- https://twitter.com/Mike_Kaminsky/status/1462439240487350276?t=bf_asUh8eXUwUMzTpYNUEQ&s=03
+- https://twitter.com/RichardFergie/status/1462425574161453056?t=GT1WmTBdNJH_mJq-VaYAZw&s=03
+- https://tvladeck.substack.com/p/did-you-control-for-_?s=03
+- https://vincentk1991.github.io/Bayesian-regression-tutorial/
+- https://stackoverflow.com/questions/39677240/multivariate-linear-regression-in-pymc3
+- https://docs.pymc.io/en/stable/pymc-examples/examples/generalized_linear_models/GLM-linear.html
+- https://www.chrisstucchio.com/blog/2017/bayesian_linear_regression.html
+- https://twitter.com/emollick/status/1462265543495491591?t=-orv6yDbuswMJA7bMYudOQ&s=03

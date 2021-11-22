@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
 
-def accuracy(y_actual, y_pred, y_label, nrmse):
+def accuracy(y_actual, y_pred, accuracy=None):
     # set up figure and subplots
     fig, ax = plt.subplots(figsize=(14,8), nrows=2, ncols=1, gridspec_kw={'height_ratios': [3, 1]})
     
@@ -13,9 +13,10 @@ def accuracy(y_actual, y_pred, y_label, nrmse):
     plot_df['Error'] = (y_pred - y_actual) / y_actual * 100
     
     # plot actual vs predicted on grid
-    plot_df[['Actual', 'Predicted']].plot(ax=ax[0], ylabel=y_label)
+    plot_df[['Actual', 'Predicted']].plot(ax=ax[0], ylabel=y_actual.name)
 
-    ax[0].annotate(f'NRMSE = {nrmse}', xy=(0.05, 0.92), xycoords='axes fraction')
+    if accuracy:
+        ax[0].annotate(f'{accuracy[0]} = {accuracy[1]}', xy=(0.05, 0.92), xycoords='axes fraction')
 
     ax[0].legend(loc="upper center", bbox_to_anchor=(0.5, 1.12), ncol=2)
     ax[0].grid(True, which='both')

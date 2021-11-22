@@ -95,6 +95,10 @@ Where there's a choice between optimization and usefullness, take the latter.
 
 We focus on helper functions to clean data, and treat algorithms as commodities.
 
+### 5. We know less than the client
+
+Assume the client knows what they're doing, then try to prove otherwise.
+
 ## Contributors
 
 These people are building `hommmer` for fun in their spare time. Cheers! 🍻
