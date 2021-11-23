@@ -110,3 +110,22 @@ When you're done making the changes, open a pull request, often referred to as a
 Congratulations :tada::tada: The hommmer team thanks you!
 
 Once your PR is merged, we will add you to the All Contributors Table in the [`README.md`](./README.md#all-contributors)
+
+### Publishing to PyPi
+
+This is more a note to self, because I keep forgetting.
+
+1. `pip install twine`
+2. `cd Documents\Projects\hommmer`
+3. update the version number in `setup.py`
+4. `python setup.py sdist bdist_wheel`
+5. delete old versions in the `dist` folder
+6. `twine check dist/*`
+7. `twine upload --repository-url https://test.pypi.org/legacy/dist/*` (optional)
+8. `Twine upload dist/*`
+
+Resources:
+
+- [Using TestPyPi](https://packaging.python.org/guides/using-testpypi/)
+- [Building a Python Package and Publishing on PyPi (The Python Package Index)](https://www.section.io/engineering-education/building-a-python-package-and-publishing-on-pypi/)
+- [Packaging Python Projects](https://packaging.python.org/tutorials/packaging-projects/)

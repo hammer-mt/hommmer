@@ -2,7 +2,7 @@
 import pathlib
 from setuptools import setup, find_packages
 HERE = pathlib.Path(__file__).parent
-VERSION = "0.0.0.2"
+VERSION = "0.0.0.3"
 PACKAGE_NAME = "hommmer"
 AUTHOR = "mike taylor"
 AUTHOR_EMAIL = "mike@saxifrage.xyz"

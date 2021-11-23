@@ -12,5 +12,7 @@ import numpy as np
 
 # decomposition root sum of squared distance
 def decomp_rssd(effect_share, spend_share):
-    return np.sqrt(sum((np.array(effect_share)-np.array(spend_share))**2))
+    value = round(np.sqrt(sum((np.array(effect_share)-np.array(spend_share))**2)),3)
+    passed = "✔️" if value < 0.5 else "❌"
+    return value, passed
 

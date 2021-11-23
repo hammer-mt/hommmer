@@ -9,7 +9,7 @@ from hommmer.charts import accuracy
 from hommmer.helpers import check_metric
 
 class Linear():
-    def __init__(self, X, y):
+    def __init__(self, X, y, media_labels):
         # start running
         start = timer()
         self.timestamp = dt.datetime.today().strftime('%Y-%m-%d %H:%M')
@@ -17,6 +17,7 @@ class Linear():
         # assign X and y
         self.X_train = X
         self.y_train = y
+        self.media_labels = media_labels
 
         # fit the model
         self._model = sm.OLS(y, X).fit()
@@ -59,7 +60,7 @@ class Linear():
         metrics = []
         for metric in metric_labels:
             
-            value = check_metric(metric, self.y_train, self.predict())
+            value = check_metric(metric, self)
             metrics.append((metric, value))
         for label, output in metrics:
             print(f"{output[1]} {label}: {output[0]}")
@@ -74,7 +75,7 @@ class Linear():
 
     def show(self, charts=True, metrics=True, results=True):
         accuracy(self.y_train, self.predict()) if charts else False
-        self.metrics(["nrmse", "rsquared"]) if metrics else False
+        self.metrics(["nrmse", "rsquared", "decomp_rssd"]) if metrics else False
         display(self.results()) if results else False
 
 
