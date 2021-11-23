@@ -52,7 +52,7 @@ def build(path, target, media, organic=None, date="date", verbose=False, overrid
 
     # run model
     model =  {
-        'linear': Linear(X, y, media)
+        'linear': Linear(y, X, media)
     }[settings['model']]
 
     return model

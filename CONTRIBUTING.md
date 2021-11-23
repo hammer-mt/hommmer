@@ -77,7 +77,7 @@ python -m venv venv
 %pip install -e your/local/path
 ```
 
-I like working from Jupyter Notebook (Anaconda) because if you run `%load_ext autoreload` then `%autoreload 2` the module will auto-reload on every saved change to your local package!
+I like working from Jupyter Notebook (Anaconda) because if you run `%load_ext autoreload` then `%autoreload 2` the module will auto-reload on every saved change to your local package! Note: restart the kernal if you run into an error with classes.
 
 7. Make your changes / contributions
 
