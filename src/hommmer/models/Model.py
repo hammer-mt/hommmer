@@ -63,5 +63,5 @@ class Model():
 
     def show(self, charts=True, metrics=True, results=True):
         accuracy(self.y_train, self.predict()) if charts else False
-        self.metrics(["nrmse", "rsquared", "decomp_rssd"]) if metrics else False
+        self.metrics(["nrmse", "rsquared", "decomp-rssd"]) if metrics else False
         display(self.results()) if results else False

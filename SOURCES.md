@@ -244,3 +244,7 @@ Here's everything we have collected on our list to read, but haven't had a chanc
 - https://docs.pymc.io/en/stable/pymc-examples/examples/generalized_linear_models/GLM-linear.html
 - https://www.chrisstucchio.com/blog/2017/bayesian_linear_regression.html
 - https://twitter.com/emollick/status/1462265543495491591?t=-orv6yDbuswMJA7bMYudOQ&s=03
+- https://stats.stackexchange.com/questions/140713/making-predictions-with-log-log-regression-model
+- https://davegiles.blogspot.com/2014/12/s.html
+- https://stats.stackexchange.com/questions/171386/what-are-bayesian-p-values
+- https://royalsocietypublishing.org/doi/10.1098/rsbl.2019.0174

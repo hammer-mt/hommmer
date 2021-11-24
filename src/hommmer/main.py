@@ -2,13 +2,14 @@ import pandas as pd
 
 from .helpers import log, init_logging
 from .cleaners import make_date_index
-from .models import Linear
+from .models import Linear, LogLinear, LogLog
 
 def build(path, target, media, organic=None, date="date", verbose=False, override={}):
     init_logging(verbose)
 
     # load the dataframe and get the X_labels
     df = pd.read_csv(path)
+    df.fillna(0, inplace=True)
     X_labels = list(df.columns)
 
     # remove target and date labels
@@ -51,11 +52,14 @@ def build(path, target, media, organic=None, date="date", verbose=False, overrid
     X = df[X_labels]
 
     # run model
-    model =  {
-        'linear': Linear(y, X, media)
-    }[settings['model']]
-
-    return model
+    if settings['model'] == 'linear':
+        return Linear(y, X, media)
+    elif settings['model'] == 'log-linear':
+        return LogLinear(y, X, media)
+    elif settings['model'] == 'log-log':
+        return LogLog(y, X, media)
+    else:
+        return Linear(y, X, media)
 
 
     
