@@ -20,8 +20,8 @@ class LogLinear(Model):
 
         # init required properties
         self.coefficients = self._coefficients()
-        self.pvalues = self._pvalues()
-        self.confidence_intervals = self._confidence_intervals()
+        self.significance = self._significance()
+        self.uncertainty = self._uncertainty()
 
         # finish running
         end = timer()
@@ -34,20 +34,19 @@ class LogLinear(Model):
         logged_y = log_ex_zeros(self.y_train)
         return sm.OLS(logged_y, self.X_train).fit()  # log y
 
-    # get the pvalues
+    # get the coefficients
     def _coefficients(self):
         return self._model.params.values
 
     # get the pvalues
-    def _pvalues(self):
+    def _significance(self):
         return self._model.params.values
 
     # calculate the confidence intervals
-    def _confidence_intervals(self):
-        conf_int_df= self._model.conf_int()
+    def _uncertainty(self):
+        conf_int_df = self._model.conf_int()
         conf_int_df.columns = ["lower", "upper"]
-        conf_int_df['% MoE'] = (conf_int_df["upper"] - conf_int_df["lower"]) / np.mean(self.y_train) * 100
-        return conf_int_df
+        return (conf_int_df["upper"] - conf_int_df["lower"]) / np.mean(self.y_train) * 100
 
     ### OVERRIDE BASE FUNCS ###
     def contribution(self, X=None):

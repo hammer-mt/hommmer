@@ -19,8 +19,8 @@ class Model():
 
         # placeholders
         self.coefficients = []
-        self.pvalues = []
-        self.confidence_intervals = None
+        self.significance = []
+        self.uncertainty = []
 
     def _fit(self, y, X):
         return None
@@ -28,8 +28,8 @@ class Model():
     def results(self):
         results_df = pd.DataFrame(self.contribution().sum(), columns=['contribution'])
         results_df['coefficients'] = self.coefficients
-        results_df['pvalues'] = self.pvalues
-        results_df = pd.concat([results_df, self.confidence_intervals], axis=1)
+        results_df['significance'] = self.significance
+        results_df['uncertainty'] = self.uncertainty
 
         return np.around(results_df, 3)
 
@@ -63,5 +63,5 @@ class Model():
 
     def show(self, charts=True, metrics=True, results=True):
         accuracy(self.y_train, self.predict()) if charts else False
-        self.metrics(["nrmse", "rsquared", "decomp-rssd"]) if metrics else False
+        self.metrics(["rsquared", "nrmse", "mape", "decomp-rssd", "cond-no"]) if metrics else False
         display(self.results()) if results else False
