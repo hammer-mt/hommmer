@@ -4,7 +4,7 @@ import pandas as pd
 from timeit import default_timer as timer # https://stackoverflow.com/questions/7370801/how-to-measure-elapsed-time-in-python
 
 from .Model import Model
-from hommmer.helpers import exp_ex_zeros, log_ex_zeros
+from hommmer.helpers import log_ex_zeros
 
 # https://www.spencertom.com/2020/08/29/marketing-mix-modeling-mmm-part-3-of-3/
 # https://stats.stackexchange.com/questions/140713/making-predictions-with-log-log-regression-model
@@ -68,5 +68,5 @@ class LogLog(Model):
         contrib_df = pd.DataFrame(data).T 
         # transform log y back into y
         for x in contrib_df:
-            contrib_df[x] = exp_ex_zeros(contrib_df[x])
+            contrib_df[x] = 10**(contrib_df[x])
         return contrib_df
