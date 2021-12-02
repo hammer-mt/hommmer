@@ -33,11 +33,11 @@ class Linear(Model):
         return self._model.params.values
 
     # get the pvalues
-    def _significance(self):
+    def _pvalues(self):
         return self._model.params.values
 
     # calculate the confidence intervals
-    def _uncertainty(self):
+    def _confidence_intervals(self):
         conf_int_df = self._model.conf_int()
         conf_int_df.columns = ["lower", "upper"]
         return (conf_int_df["upper"] - conf_int_df["lower"]) / np.mean(self.y_train) * 100

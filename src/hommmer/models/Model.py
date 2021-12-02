@@ -19,19 +19,9 @@ class Model():
 
         # placeholders
         self.coefficients = []
-        self.significance = []
-        self.uncertainty = []
 
     def _fit(self, y, X):
         return None
-
-    def results(self):
-        results_df = pd.DataFrame(self.contribution().sum(), columns=['contribution'])
-        results_df['coefficients'] = self.coefficients
-        results_df['significance'] = self.significance
-        results_df['uncertainty'] = self.uncertainty
-
-        return np.around(results_df, 3)
 
     def contribution(self, X=None):
         if (X) is None:
@@ -55,7 +45,6 @@ class Model():
     def metrics(self, metric_labels):
         metrics = []
         for metric in metric_labels:
-            
             value = check_metric(metric, self)
             metrics.append((metric, value))
         for label, output in metrics:
