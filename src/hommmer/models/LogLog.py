@@ -10,9 +10,9 @@ from hommmer.helpers import log_ex_zeros
 # https://stats.stackexchange.com/questions/140713/making-predictions-with-log-log-regression-model
 # https://davegiles.blogspot.com/2014/12/s.html
 class LogLog(Model):
-    def __init__(self, y, X, media_labels):
+    def __init__(self, y, X, media_labels, settings):
         # inheritance and start timer
-        super().__init__(y, X, media_labels)
+        super().__init__(y, X, media_labels, settings)
         start = timer()
 
         # fit the model
@@ -42,7 +42,7 @@ class LogLog(Model):
 
     # get the pvalues
     def _pvalues(self):
-        return self._model.params.values
+        return self._model.pvalues
 
     # calculate the confidence intervals
     def _confidence_intervals(self):

@@ -5,9 +5,9 @@ from timeit import default_timer as timer # https://stackoverflow.com/questions/
 from .Model import Model
 
 class Linear(Model):
-    def __init__(self, y, X, media_labels):
+    def __init__(self, y, X, media_labels, settings):
         # inheritance and start timer
-        super().__init__(y, X, media_labels)
+        super().__init__(y, X, media_labels, settings)
         start = timer()
 
         # fit the model
@@ -15,8 +15,6 @@ class Linear(Model):
 
         # init required properties
         self.coefficients = self._coefficients()
-        self.significance = self._significance()
-        self.uncertainty = self._uncertainty()
 
         # finish running
         end = timer()
@@ -34,13 +32,14 @@ class Linear(Model):
 
     # get the pvalues
     def _pvalues(self):
-        return self._model.params.values
+        return self._model.pvalues
 
     # calculate the confidence intervals
     def _confidence_intervals(self):
         conf_int_df = self._model.conf_int()
         conf_int_df.columns = ["lower", "upper"]
-        return (conf_int_df["upper"] - conf_int_df["lower"]) / np.mean(self.y_train) * 100
+        conf_int_df['uncertainty'] = (conf_int_df["upper"] - conf_int_df["lower"]) / np.mean(self.y_train) * 100
+        return conf_int_df
 
 
     

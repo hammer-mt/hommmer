@@ -6,9 +6,9 @@ from sklearn.linear_model import Ridge as SKRidge # https://scikit-learn.org/sta
 from .Model import Model
 
 class Ridge(Model):
-    def __init__(self, y, X, media_labels):
+    def __init__(self, y, X, media_labels, settings):
         # inheritance and start timer
-        super().__init__(y, X, media_labels)
+        super().__init__(y, X, media_labels, settings)
         start = timer()
 
         # fit the model

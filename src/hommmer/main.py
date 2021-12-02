@@ -2,15 +2,24 @@ import pandas as pd
 
 from .helpers import log, init_logging
 from .cleaners import make_date_index
-from .models import Linear, LogLinear, LogLog
+from .models import Linear, LogLinear, LogLog, Ridge
 
-def build(path, target, media, organic=None, date="date", verbose=False, override={}):
+def build(path, target, media, organic=None, date=None, verbose=False, override={}):
     init_logging(verbose)
 
     # load the dataframe and get the X_labels
     df = pd.read_csv(path)
     df.fillna(0, inplace=True)
     X_labels = list(df.columns)
+
+    # guess date if not set
+    if date is None:
+        if 'date' in df.columns:
+            date = 'date'
+        elif 'Date' in df.columns:
+            date = 'Date'
+        else:
+            date = df.columns[0]
 
     # remove target and date labels
     X_labels.remove(target)
@@ -30,6 +39,7 @@ def build(path, target, media, organic=None, date="date", verbose=False, overrid
     # default settings
     settings = {
         "model": 'linear',
+        "split": 0.15
     }
     
     # override settings
@@ -53,13 +63,15 @@ def build(path, target, media, organic=None, date="date", verbose=False, overrid
 
     # run model
     if settings['model'] == 'linear':
-        return Linear(y, X, media)
+        return Linear(y, X, media, settings)
     elif settings['model'] == 'log-linear':
-        return LogLinear(y, X, media)
+        return LogLinear(y, X, media, settings)
     elif settings['model'] == 'log-log':
-        return LogLog(y, X, media)
+        return LogLog(y, X, media, settings)
+    elif settings['model'] == 'ridge':
+        return Ridge(y, X, media, settings)
     else:
-        return Linear(y, X, media)
+        return Linear(y, X, media, settings)
 
 
     
