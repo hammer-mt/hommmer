@@ -6,7 +6,7 @@ from .days_in_month import days_in_month
 from .end_of_month import end_of_month
 from .group_monthly import group_monthly
 from .group_weekly import group_weekly
-from .holiday_dummies import holiday_dummies
+from .date_dummies import date_dummies
 from .interpolate_monthly import interpolate_monthly
 from .interpolate_weekly import interpolate_weekly
 from .make_column_index import make_column_index
@@ -39,5 +39,6 @@ from .describe_data import describe_data
 from .standard_scaler import standard_scaler
 from .train_test_split import train_test_split
 from .make_date_index import make_date_index
+from .holiday_dummies import holiday_dummies
 
 
