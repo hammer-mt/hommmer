@@ -248,3 +248,4 @@ Here's everything we have collected on our list to read, but haven't had a chanc
 - https://davegiles.blogspot.com/2014/12/s.html
 - https://stats.stackexchange.com/questions/171386/what-are-bayesian-p-values
 - https://royalsocietypublishing.org/doi/10.1098/rsbl.2019.0174
+- https://juanitorduz.github.io/fb_prophet/
