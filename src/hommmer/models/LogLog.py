@@ -48,8 +48,8 @@ class LogLog(Model):
     def _confidence_intervals(self):
         conf_int_df= self._model.conf_int()
         conf_int_df.columns = ["lower", "upper"]
-        return (conf_int_df["upper"] - conf_int_df["lower"]) / np.mean(self.y_train) * 100
-
+        return (conf_int_df["upper"] - conf_int_df["lower"]) / np.mean(np.log(self.y_train)) * 100
+    
     ### OVERRIDE BASE FUNCS ###
     def contribution(self, X=None):
         if (X) is None:
@@ -57,16 +57,20 @@ class LogLog(Model):
 
         coef_df = pd.DataFrame({'coefficient': self.coefficients}, index=X.columns)
 
+        X_log = np.log(X+1)
+        y_pred_log = self._model.predict(X_log)
+        y_pred = np.exp(y_pred_log) - 1 # transform log y back into y
+
         data = []
         for x in list(X.columns):
             contrib = coef_df['coefficient'].loc[x] * np.log(X[x] + 1)
             data.append(contrib)
 
-        contrib_df = pd.DataFrame(data).T
-        exp_contrib_df = contrib_df.copy()
-        # transform log y back into y
-        for x in contrib_df:
-            contrib_share = contrib_df[x] / contrib_df.sum() 
-            exp_contrib_df[x] = np.exp(contrib_df[x]) - contrib_share # exp y and remove 1
+        log_contrib_df = pd.DataFrame(data).T
+        contrib_df = log_contrib_df.copy()
+        # transform log contribs by using share
+        for x in contrib_df.columns:
+            contrib_share = log_contrib_df[x] / y_pred_log 
+            contrib_df[x] = y_pred * contrib_share
 
-        return exp_contrib_df
+        return contrib_df
