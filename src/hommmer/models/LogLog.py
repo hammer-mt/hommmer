@@ -29,10 +29,10 @@ class LogLog(Model):
 
     # fit the model
     def _fit(self):
-        logged_y = log_ex_zeros(self.y_train)
+        logged_y = np.log(self.y_train + 1)
         logged_X = self.X_train.copy()
         for x in list(self.X_train.columns):
-            logged_X[x] = log_ex_zeros(self.X_train[x])
+            logged_X[x] = np.log(self.X_train[x] + 1)
 
         return sm.OLS(logged_y, logged_X).fit() # log both y and X
 
@@ -59,11 +59,14 @@ class LogLog(Model):
 
         data = []
         for x in list(X.columns):
-            contrib = coef_df['coefficient'].loc[x] * log_ex_zeros(X[x])
+            contrib = coef_df['coefficient'].loc[x] * np.log(X[x] + 1)
             data.append(contrib)
 
-        contrib_df = pd.DataFrame(data).T 
+        contrib_df = pd.DataFrame(data).T
+        exp_contrib_df = contrib_df.copy()
         # transform log y back into y
         for x in contrib_df:
-            contrib_df[x] = 10**(contrib_df[x])
-        return contrib_df
+            contrib_share = contrib_df[x] / contrib_df.sum() 
+            exp_contrib_df[x] = np.exp(contrib_df[x]) - contrib_share # exp y and remove 1
+
+        return exp_contrib_df

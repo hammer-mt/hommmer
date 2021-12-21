@@ -2,7 +2,7 @@ import pandas as pd
 
 from .helpers import log, init_logging
 from .cleaners import make_date_index
-from .models import Linear, LogLinear, LogLog, Ridge
+from .models import Linear, LogLinear, LogLog, Ridge, DeepLearning
 
 def build(path, target, media, organic=None, date=None, verbose=False, override={}):
     init_logging(verbose)
@@ -38,7 +38,7 @@ def build(path, target, media, organic=None, date=None, verbose=False, override=
 
     # default settings
     settings = {
-        "model": 'linear',
+        "model": 'all',
         "split": 0.15
     }
     
@@ -70,8 +70,16 @@ def build(path, target, media, organic=None, date=None, verbose=False, override=
         return LogLog(y, X, media, settings)
     elif settings['model'] == 'ridge':
         return Ridge(y, X, media, settings)
+    elif settings['model'] == 'deep-learning':
+        return DeepLearning(y, X, media, settings)
     else:
-        return Linear(y, X, media, settings)
+        return {
+            'linear': Linear(y, X, media, settings),
+            'log-linear': LogLinear(y, X, media, settings),
+            'log-log': LogLog(y, X, media, settings),
+            'ridge': Ridge(y, X, media, settings),
+            'deep-learning': DeepLearning(y, X, media, settings)
+            }
 
 
     

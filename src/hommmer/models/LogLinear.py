@@ -29,7 +29,7 @@ class LogLinear(Model):
 
     # fit the model
     def _fit(self):
-        logged_y = log_ex_zeros(self.y_train)
+        logged_y = np.log(self.y_train + 1)
         return sm.OLS(logged_y, self.X_train).fit()  # log y
 
     # get the coefficients
@@ -59,10 +59,13 @@ class LogLinear(Model):
             data.append(contrib)
 
         contrib_df = pd.DataFrame(data).T
+        exp_contrib_df = contrib_df.copy()
         # transform log y back into y
         for x in contrib_df:
-            contrib_df[x] = 10**(contrib_df[x])
-        return contrib_df
+            contrib_share = contrib_df[x] / contrib_df.sum() 
+            exp_contrib_df[x] = np.exp(contrib_df[x]) - contrib_share # exp y and remove 1
+
+        return exp_contrib_df
 
 
     

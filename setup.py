@@ -19,7 +19,7 @@ INSTALL_REQUIRES = [
     "typing",
     "sklearn",
     "seaborn",
-    "prophet"
+    # "prophet"
 ]
 setup(name=PACKAGE_NAME,
     version=VERSION,
