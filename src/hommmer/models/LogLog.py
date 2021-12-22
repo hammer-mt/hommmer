@@ -53,7 +53,7 @@ class LogLog(Model):
     ### OVERRIDE BASE FUNCS ###
     def contribution(self, X=None):
         if (X) is None:
-            X = self.X_train
+            X = self.X_actual
 
         coef_df = pd.DataFrame({'coefficient': self.coefficients}, index=X.columns)
 

@@ -72,6 +72,10 @@ class Model():
         for label, output in metrics:
             print(f"{output[1]} {label}: {output[0]}")
 
+    def metric(self, metric_label):
+        value = check_metric(metric_label, self)
+        return value[0]
+
     def show(self, charts=True, metrics=True, results=True):
         accuracy(self.y_actual, self.predict()) if charts else False
         self.metrics(["rsquared", "nrmse", "mape", "decomp-rssd", "cond-no"]) if metrics else False

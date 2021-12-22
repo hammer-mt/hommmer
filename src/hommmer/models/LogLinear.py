@@ -49,13 +49,12 @@ class LogLinear(Model):
     ### OVERRIDE BASE FUNCS ###
     def contribution(self, X=None):
         if (X) is None:
-            X = self.X_train
+            X = self.X_actual
 
         coef_df = pd.DataFrame({'coefficient': self.coefficients}, index=X.columns)
 
         y_pred_log = self._model.predict(X)
         y_pred = np.exp(y_pred_log) - 1 # transform log y back into y
-
         data = []
         for x in list(X.columns):
             contrib = coef_df['coefficient'].loc[x] * X[x]
