@@ -40,5 +40,7 @@ from .standard_scaler import standard_scaler
 from .train_test_split import train_test_split
 from .make_date_index import make_date_index
 from .holiday_dummies import holiday_dummies
+from .guess_categorical_variables import guess_categorical_variables
+from .guess_numerical_variables import guess_numerical_variables
 
 

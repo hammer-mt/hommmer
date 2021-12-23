@@ -6,6 +6,8 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.neural_network import MLPRegressor
 from sklearn.preprocessing import QuantileTransformer, OneHotEncoder, Normalizer
 from sklearn import set_config
+
+from hommmer.cleaners import guess_categorical_variables, guess_numerical_variables
 set_config(display='diagram')
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import train_test_split,cross_validate
@@ -35,13 +37,16 @@ class DeepLearning(Model):
     # fit the model
     def _fit(self):
         all_features = list(self.X_train.columns)
-        transformers = [
-            ('scaler', QuantileTransformer(), all_features),
+        categorical = guess_categorical_variables(self.X_train)
+        numerical = guess_numerical_variables(self.X_train.drop(categorical, axis=1))
+        transformers =[
+            ('one hot', OneHotEncoder(handle_unknown='ignore'), categorical),
+            ('scaler', QuantileTransformer(), numerical),
             ('normalizer',Normalizer(), all_features)
         ]
         ct = ColumnTransformer(transformers)
         steps =[
-            ('column_transformer',ct),
+            ('column_transformer', ct),
             ('model', MLPRegressor(solver='lbfgs'))
             # solver 'lbfgs' is used for dataset with less than 1000 rows, if more than 1000 use solver 'adam'
             ]
