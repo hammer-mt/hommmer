@@ -34,12 +34,6 @@ def build(path, target, media, organic=None, date=None, geo=None, override={}):
         else:
             date = df.columns[0]
 
-    # remove target and date labels
-    X_labels.remove(target)
-    X_labels.remove(date)
-    if geo:
-        X_labels.remove(geo)
-
     # if organic is not set, set it by removing media vars
     if organic is None:
         organic = X_labels.copy()
@@ -47,7 +41,7 @@ def build(path, target, media, organic=None, date=None, geo=None, override={}):
             organic.remove(x)
     # if organic is set, remove anything not in media or organic
     else:
-        for x in X_labels:
+        for x in df.columns:
             if x not in media and x not in organic:
                 X_labels.remove(x)
 
@@ -56,7 +50,7 @@ def build(path, target, media, organic=None, date=None, geo=None, override={}):
     log(f"file: {path}")
     log(f"y = {target}")
     log(f"X = {', '.join(X_labels)}")
-    log(f"vars: {df.shape[1]}")
+    log(f"vars: {len(X_labels)}")
     log(f"obs: {df.shape[0]}")
     log(f"settings: {settings}")
 
