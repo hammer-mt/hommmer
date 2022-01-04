@@ -1,3 +1,4 @@
+import os
 import datetime as dt
 import pandas as pd
 import numpy as np
@@ -9,7 +10,7 @@ from hommmer.charts import accuracy
 from hommmer.helpers import check_metric
 
 class Model():
-    def __init__(self, y, X, media_labels, settings):
+    def __init__(self, y, X, media_labels, settings, model):
         # set timestamp
         self.timestamp = dt.datetime.today().strftime('%Y-%m-%d %H:%M')
 
@@ -20,7 +21,10 @@ class Model():
         else:
             X_train, X_test, y_train, y_test = X, X, y, y
 
-        
+        self.settings = settings
+        self.model = model
+        self.runtime = None
+
         # assign X and y
         self.X_actual = X
         self.y_actual = y
@@ -57,6 +61,18 @@ class Model():
             data.append(contrib)
 
         contrib_df = pd.DataFrame(data).T
+        # handle geo level data
+        # TODO: roll geo model up after
+        if self.settings['geo']:
+            contrib_df['geodate'] = contrib_df.index.values.astype(str)
+            contrib_df['date'] = contrib_df['geodate'].apply(lambda x: x.split('$')[0])
+            contrib_df['geo'] = contrib_df['geodate'].apply(lambda x: x.split('$')[1])
+
+            national = contrib_df.groupby('date').sum()
+            
+            national.index.name = None
+            contrib_df = national
+
         return contrib_df
 
     def predict(self, X=None):
@@ -75,6 +91,29 @@ class Model():
     def metric(self, metric_label):
         value = check_metric(metric_label, self)
         return value[0]
+
+    def _save(self):
+        file_loc = f"models-{self.settings['file']}"
+        models_output = pd.DataFrame.from_dict([{
+            'file': self.settings['file'],
+            'model': self.model,
+            'metric': self.settings['metric'],
+            'error': self.metric(self.settings['metric']),
+            'timestamp': dt.datetime.today().strftime('%Y-%m-%d %H:%M'),
+            'runtime': self.runtime,
+            'y_label': self.y_train.name,
+            'X_labels': ', '.join(list(self.X_train.columns)),
+        }])
+        if os.path.isfile(file_loc):
+            # save to existing file
+            loaded_models = pd.read_csv(file_loc)
+            all_models = loaded_models.append(models_output)
+            all_models.to_csv(file_loc, index=False)
+            print("added model to existing file")
+        else:
+            # save new model file
+            models_output.to_csv(file_loc, index=False)
+            print("added new model file locally")
 
     def show(self, charts=True, metrics=True, results=True):
         accuracy(self.y_actual, self.predict()) if charts else False

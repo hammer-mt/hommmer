@@ -8,7 +8,7 @@ from .Model import Model
 class Ridge(Model):
     def __init__(self, y, X, media_labels, settings):
         # inheritance and start timer
-        super().__init__(y, X, media_labels, settings)
+        super().__init__(y, X, media_labels, settings, "Ridge")
         start = timer()
 
         # fit the model
@@ -20,6 +20,9 @@ class Ridge(Model):
         # finish running
         end = timer()
         self.runtime = end - start # Time in seconds, e.g. 5.38091952400282
+
+        # log model locally
+        self._save()
 
     ### EDIT BELOW HERE ###
 

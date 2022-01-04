@@ -42,5 +42,5 @@ from .make_date_index import make_date_index
 from .holiday_dummies import holiday_dummies
 from .guess_categorical_variables import guess_categorical_variables
 from .guess_numerical_variables import guess_numerical_variables
-
+from .make_geodate_index import make_geodate_index
 

@@ -2,6 +2,7 @@ from hommmer.metrics import *
 
 def check_metric(metric_label, model):
     y_pred = model.predict(X=model.X_test)
+    # TODO: roll model up at geo level here?
     if metric_label == 'nrmse':
         return nrmse(model.y_test, y_pred)
     elif metric_label == 'rsquared':

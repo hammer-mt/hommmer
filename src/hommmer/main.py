@@ -1,13 +1,15 @@
 import pandas as pd
 
 from .helpers import log, init_logging
-from .cleaners import make_date_index
+from .cleaners import make_date_index, make_geodate_index
 from .models import Linear, LogLinear, LogLog, Ridge, DeepLearning
 
-def build(path, target, media, organic=None, date=None, override={}):
+def build(path, target, media, organic=None, date=None, geo=None, override={}):
     # default settings
     settings = {
+        "file": path,
         "model": 'all',
+        "geo": geo,
         "split": 0.15,
         "metric": 'nrmse',
         "verbose": False
@@ -35,6 +37,8 @@ def build(path, target, media, organic=None, date=None, override={}):
     # remove target and date labels
     X_labels.remove(target)
     X_labels.remove(date)
+    if geo:
+        X_labels.remove(geo)
 
     # if organic is not set, set it by removing media vars
     if organic is None:
@@ -57,8 +61,11 @@ def build(path, target, media, organic=None, date=None, override={}):
     log(f"settings: {settings}")
 
     # make date the index
-    make_date_index(df, date)
-
+    if geo is None:
+        make_date_index(df, date)
+    else:
+        make_geodate_index(df, date, geo)
+        
     # assign the y and X frames
     y = df[target]
     X = df[X_labels]
