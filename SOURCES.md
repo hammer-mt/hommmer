@@ -249,3 +249,6 @@ Here's everything we have collected on our list to read, but haven't had a chanc
 - https://stats.stackexchange.com/questions/171386/what-are-bayesian-p-values
 - https://royalsocietypublishing.org/doi/10.1098/rsbl.2019.0174
 - https://juanitorduz.github.io/fb_prophet/
+- https://stats.stackexchange.com/questions/238297/how-to-determine-appropriate-lagged-features-for-learning-systems-with-states
+- https://proceedings.neurips.cc/paper/2008/file/7380ad8a673226ae47fce7bff88e9c33-Paper.pdf
+- https://www.youtube.com/watch?v=DJ0c7Bm5Djk&t=16809s

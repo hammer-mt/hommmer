@@ -1,12 +1,14 @@
 from hommmer.metrics import *
 
 def check_metric(metric_label, model):
-    y_pred = model.predict(X=model.X_test)
-    # TODO: roll model up at geo level here?
+    X_test = model.X_test
+    y_test = model.y_test
+    y_pred = model.predict(X=X_test)
+    
     if metric_label == 'nrmse':
-        return nrmse(model.y_test, y_pred)
+        return nrmse(y_test, y_pred)
     elif metric_label == 'rsquared':
-        return rsquared(model.y_test, y_pred)
+        return rsquared(y_test, y_pred)
     elif metric_label == 'decomp-rssd':
         contrib_df = model.contribution()[model.media_labels]
         media_X_df = model.X_actual[model.media_labels]
@@ -14,4 +16,4 @@ def check_metric(metric_label, model):
     elif metric_label == 'cond-no':
         return condition_number(model.X_train)
     elif metric_label == 'mape':
-        return mape(model.y_test, y_pred)
+        return mape(y_test, y_pred)

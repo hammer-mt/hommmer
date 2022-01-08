@@ -15,7 +15,7 @@ from .vif import vif
 from .ffe import ffe
 from .bif import bif
 from .rfe import rfe
-from .prophet_seasonality import prophet_seasonality
+# from .prophet_seasonality import prophet_seasonality
 from .seasonal_decomp import seasonal_decomp
 from .normalize import normalize
 from .denormalize import denormalize

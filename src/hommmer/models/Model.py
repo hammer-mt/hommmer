@@ -61,17 +61,6 @@ class Model():
             data.append(contrib)
 
         contrib_df = pd.DataFrame(data).T
-        # handle geo level data
-        # TODO: roll geo model up after
-        if self.settings['geo']:
-            contrib_df['geodate'] = contrib_df.index.values.astype(str)
-            contrib_df['date'] = contrib_df['geodate'].apply(lambda x: x.split('$')[0])
-            contrib_df['geo'] = contrib_df['geodate'].apply(lambda x: x.split('$')[1])
-
-            national = contrib_df.groupby('date').sum()
-            
-            national.index.name = None
-            contrib_df = national
 
         return contrib_df
 
@@ -93,7 +82,11 @@ class Model():
         return value[0]
 
     def _save(self):
-        file_loc = f"models-{self.settings['file']}"
+        file = self.settings['file']
+        file_paths = file.split('/')
+        filename = file_paths.pop()
+        file_paths.append("models-"+filename)
+        file_loc = '/'.join(file_paths)
         models_output = pd.DataFrame.from_dict([{
             'file': self.settings['file'],
             'model': self.model,

@@ -1,6 +1,6 @@
 import numpy as np
 
-def apply_adstock(x, L, P, D):
+def delayed_adstock(x, L, P, D):
     '''
     params:
     x: original media variable, array

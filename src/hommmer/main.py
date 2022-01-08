@@ -2,13 +2,14 @@ import pandas as pd
 
 from .helpers import log, init_logging
 from .cleaners import make_date_index, make_geodate_index
+from .features import geometric_adstock, power_saturation
 from .models import Linear, LogLinear, LogLog, Ridge, DeepLearning
 
-def build(path, target, media, organic=None, date=None, geo=None, override={}):
+def build(path, target, media, organic=None, date=None, geo=None, adstock=None, saturation=None, override={}):
     # default settings
     settings = {
         "file": path,
-        "model": 'all',
+        "model": 'linear',
         "geo": geo,
         "split": 0.15,
         "metric": 'nrmse',
@@ -60,6 +61,30 @@ def build(path, target, media, organic=None, date=None, geo=None, override={}):
     else:
         make_geodate_index(df, date, geo)
         
+    # adstock transform
+    if adstock:
+        for i in range(len(media)):
+            x_label = media[i]
+            theta = adstock[i]
+            if theta > 0:
+                trans_label = x_label+" θ="+str(theta)
+                df[trans_label] = geometric_adstock(df[x_label], theta)
+                X_labels.append(trans_label)
+                X_labels.remove(x_label)
+                media[i] = trans_label
+
+    # saturation transform
+    if saturation:
+        for i in range(len(media)):
+            x_label = media[i]
+            alpha = saturation[i]
+            if alpha > 0:
+                trans_label = x_label+" α="+str(alpha)
+                df[trans_label] = power_saturation(df[x_label], 1-alpha)
+                X_labels.append(trans_label)
+                X_labels.remove(x_label)
+                media[i] = trans_label
+
     # assign the y and X frames
     y = df[target]
     X = df[X_labels]
@@ -85,8 +110,6 @@ def build(path, target, media, organic=None, date=None, geo=None, override={}):
             }
         accuracies = [{"model": x, f"{settings['metric']}": all_models[x].metric(settings['metric'])} for x in all_models.keys()]
         # min_error = min(all_models.keys(), key=lambda x: all_models[x].metric(settings['metric']))
-        log("model accuracies:")
-        log(accuracies)
         min_error = min(accuracies, key=lambda x: x[settings['metric']])
         return all_models[min_error['model']]
 
