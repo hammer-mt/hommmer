@@ -252,3 +252,4 @@ Here's everything we have collected on our list to read, but haven't had a chanc
 - https://stats.stackexchange.com/questions/238297/how-to-determine-appropriate-lagged-features-for-learning-systems-with-states
 - https://proceedings.neurips.cc/paper/2008/file/7380ad8a673226ae47fce7bff88e9c33-Paper.pdf
 - https://www.youtube.com/watch?v=DJ0c7Bm5Djk&t=16809s
+- https://blog.asana.com/2022/01/marketing-measurement-capabilities/#close
