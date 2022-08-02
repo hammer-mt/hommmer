@@ -264,3 +264,4 @@ Here's everything we have collected on our list to read, but haven't had a chanc
 - https://www.sciencedirect.com/science/article/abs/pii/S016781161500066X
 - https://juanitorduz.github.io/pymc_mmm/
 - https://towardsdatascience.com/python-stan-implementation-of-multiplicative-marketing-mix-model-with-deep-dive-into-adstock-a7320865b334
+- https://blog.asana.com/2022/01/marketing-measurement-capabilities/#close
