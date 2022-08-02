@@ -252,3 +252,15 @@ Here's everything we have collected on our list to read, but haven't had a chanc
 - https://stats.stackexchange.com/questions/238297/how-to-determine-appropriate-lagged-features-for-learning-systems-with-states
 - https://proceedings.neurips.cc/paper/2008/file/7380ad8a673226ae47fce7bff88e9c33-Paper.pdf
 - https://www.youtube.com/watch?v=DJ0c7Bm5Djk&t=16809s
+- https://www.eigenfoo.xyz/_posts/2018-06-19-bayesian-modelling-cookbook/
+- https://towardsdatascience.com/introduction-to-bayesian-linear-regression-e66e60791ea7
+- https://www.semanticscholar.org/paper/Probabilistic-programming-in-Python-using-PyMC3-Salvatier-Wiecki/8085b60ce1771647f11ccc4728397275b502f359?p2df
+- https://www.quantstart.com/articles/Bayesian-Linear-Regression-Models-with-PyMC3/
+- https://twiecki.io/blog/2013/08/12/bayesian-glms-1/
+- https://www.datasciencecentral.com/k-means-a-step-towards-marketing-mix-modeling/
+- https://vincentk1991.github.io/adstock-pyro/
+- https://discourse.pymc.io/t/geometric-adstock-paramter-estimation-in-pymc3-and-theano-using-theano-scan/1864
+- http://www.17bigdata.com/marketing-mix-modelling-mmm-a-potential-solution/
+- https://www.sciencedirect.com/science/article/abs/pii/S016781161500066X
+- https://juanitorduz.github.io/pymc_mmm/
+- https://towardsdatascience.com/python-stan-implementation-of-multiplicative-marketing-mix-model-with-deep-dive-into-adstock-a7320865b334
